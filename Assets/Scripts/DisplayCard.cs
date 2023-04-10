@@ -30,16 +30,21 @@ public class DisplayCard : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        this.id = displayCard[0].id;
-        this.cardName = displayCard[0].cardName;
-        this.cost = displayCard[0].cost;
-        this.cardDescription = displayCard[0].cardDescription;
-        this.imageSprite = displayCard[0].spriteImage;
+       
+    }
 
-       nameText.text= displayCard[0].cardName;
-       costText.text= displayCard[0].cost.ToString();
-       descriptionText.text = displayCard[0].cardDescription;
-        artImage.sprite = displayCard[0].spriteImage;
-      
+    public void SetCard (Card card)
+    {
+        this.id = card.id;
+        this.cardName = card.cardName;
+        this.cost = card.cost;
+        this.cardDescription = card.cardDescription;
+        this.imageSprite = card.spriteImage;
+
+        nameText.text = card.cardName;
+        costText.text = card.cost.ToString();
+        descriptionText.text = card.cardDescription;
+        artImage.sprite = card.spriteImage;
+
     }
 }
